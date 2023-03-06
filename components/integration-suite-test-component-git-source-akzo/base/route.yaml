@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: integration-suite-test-component-git-source-akzo
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: integration-suite-test-component-git-source-akzo
+    app.kubernetes.io/part-of: integ-app-apjy
+  name: integration-suite-test-component-git-source-akzo
+  namespace: integration-e2e-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: integration-suite-test-component-git-source-akzo
+    weight: null
+status: {}
